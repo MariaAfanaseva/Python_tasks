@@ -1,0 +1,10 @@
+{% extends 'mainapp/base.html' %}
+{% block content %}
+    <div>Products</div>
+    {% for product in product_list %}
+        <div>
+            <div>{{ product.name }}</div>
+            <div>{{ product.price }}</div>
+        </div>
+    {% endfor %}
+{% endblock %}
