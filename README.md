@@ -1,2 +1,2 @@
-# Python_tasks
+# Tasks
 Different tasks on Python
