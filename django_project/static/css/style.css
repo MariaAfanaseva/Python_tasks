@@ -1,0 +1,20 @@
+body{
+    color: black;
+    font-size: 18px;
+    padding: 50px;
+}
+
+.title{
+    text-align: center;
+    font-size: 25px;
+    color: grey;
+}
+
+.products{
+    display: flex;
+    justify-content: space-between;
+}
+
+.product_name, .product_price{
+    padding: 10px;
+}
