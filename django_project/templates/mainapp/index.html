@@ -1,11 +1,25 @@
 {% extends 'mainapp/base.html' %}
 {% block content %}
-    <a href="{% url 'main:create' %}">Create product</a>
+    <div class="btn_block">
+        <a class="btn"
+           id="create_product">Create product</a>
+    </div>
     <div class="title">Products</div>
-    {% for product in product_list %}
-        <div class="products">
-            <div class="product_name">{{ product.name }}</div>
-            <div class="product_price">{{ product.price }}</div>
+        <div class="products" id="products_table">
+            {% include 'mainapp/products_table.html' %}
         </div>
-    {% endfor %}
+    <div class="overlay invisible" id="add_product_modal">
+        <div class="modal">
+            <div class="close" id="close_modal">&times;</div>
+            <form id="create_product_form" action="{% url 'main:create' %}"  method="post" enctype="multipart/form-data">
+                <div class="add_product_title">Create product</div>
+                <div class="add_product_block">
+                    {% include 'mainapp/new_product.html' %}
+                </div>
+                <div class="btn_block"><a class="btn" id="create_btn">Create</a></div>
+
+            </form>
+        </div>
+    </div>
+
 {% endblock %}
