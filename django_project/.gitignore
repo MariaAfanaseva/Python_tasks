@@ -1,0 +1,6 @@
+.env
+*.yml
+.idea
+migrations/
+venv/
+__pycache__/

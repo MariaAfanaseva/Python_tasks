@@ -1,0 +1,11 @@
+{% extends 'mainapp/base.html' %}
+{% block content %}
+    <a href="{% url 'main:create' %}">Create product</a>
+    <div class="title">Products</div>
+    {% for product in product_list %}
+        <div class="products">
+            <div class="product_name">{{ product.name }}</div>
+            <div class="product_price">{{ product.price }}</div>
+        </div>
+    {% endfor %}
+{% endblock %}
