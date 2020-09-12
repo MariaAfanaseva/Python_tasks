@@ -31,12 +31,11 @@ class CreateProduct(View):
             self.response['result'] = render_to_string(self.products_table,
                                                        {'product_list': Product.objects.all()},
                                                        request=request)
-            return JsonResponse(self.response)
         else:
             print(add_product_form.errors)
             self.response['form_is_valid'] = False
             self.response['result'] = render_to_string(self.new_product,
                                                        {'form': add_product_form},
                                                        request=request)
-            return JsonResponse(self.response)
+        return JsonResponse(self.response)
 

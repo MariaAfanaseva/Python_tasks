@@ -13,7 +13,7 @@
             <div class="close" id="close_modal">&times;</div>
             <form id="create_product_form" action="{% url 'main:create' %}"  method="post" enctype="multipart/form-data">
                 <div class="add_product_title">Create product</div>
-                <div class="add_product_block">
+                <div class="add_product_block" id="add_product_block">
                     {% include 'mainapp/new_product.html' %}
                 </div>
                 <div class="btn_block"><a class="btn" id="create_btn">Create</a></div>

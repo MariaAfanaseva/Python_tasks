@@ -1,5 +1,4 @@
 function createProduct(form, form_url) {
-    const products_table = $('#products_table');
    $('#create_btn').off('click').on('click', () => {
         $.ajax(
             {
@@ -10,9 +9,9 @@ function createProduct(form, form_url) {
                     console.log(data);
                     if (data.form_is_valid) {
                         $('#add_product_modal').addClass('invisible');
-                        products_table.html(data.result);
+                        $('#products_table').html(data.result);
                     } else {
-                        $('.add_product_block').html(data.result);
+                        $('#add_product_block').html(data.result);
                     }
                 }
             }
